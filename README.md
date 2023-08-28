@@ -11,9 +11,9 @@
 
 # About
 
-* This tool utilizes Criminal IP API to detect the IP addresses of C2 servers that are directory listed.
+* This tool utilizes Criminal IP API to detect the IP addresses of C2 (Command and Control) servers that are directory listed.
 
-* After downloading files from the respective C2 server, it scans for malicious files using clamAV.
+* After downloading files from the respective Cnc server, it scans for malicious files using clamAV.
 
 * It utilizes Criminal IP's API([https://api.criminalip.io/v1/banner/search](https://api.criminalip.io/v1/banner/search)) to detect the corresponding IPs.
 
@@ -56,12 +56,12 @@ pip install requests
 * **Clam AV**
 
     * You need to download clamAV in advance.  → [clamAV download](https://www.clamav.net/downloads)
+      
+    ![Alt Text](https://github.com/mt7315/criminalip_clamAVP/blob/main/Images/Image%201.png)
 
     * After downloading the installation file that corresponds to your operating system, proceed with the installation (administrator privileges are required).
 
     </br>
-
-    (마케팅팀 이미지 삽입 필요)
 
 
 </br>
@@ -71,7 +71,7 @@ pip install requests
 **Download Repository**
 
 ```
-git clone repository_address.git (마케팅팀 삽입 필요)
+git clone https://github.com/mt7315/criminalip_clamAVP
 ```
 
 **Configure ClamAV**
@@ -98,7 +98,7 @@ Example
 ```
 </br>
 
-(마케팅팀 이미지 삽입 필요)
+![Alt Text](https://github.com/mt7315/criminalip_clamAVP/blob/main/Images/Image%202.png)
 
 * Run 'cmd(terminal)' as administrator and locate the files to the folder where ClamAV is installed.
 ```
@@ -116,13 +116,13 @@ freshclam
 
 </br>
 
-(마케팅팀 이미지 삽입 필요)
+![Alt Text](https://github.com/mt7315/criminalip_clamAVP/blob/main/Images/Image%203.png)
 
 * Alternatively, you can verify the installation and execution by using the following command in the terminal.
 ```
 netstat -nao | find "3310"
 ```
-(마케팅팀 이미지 삽입 필요)
+![Alt Text](https://github.com/mt7315/criminalip_clamAVP/blob/main/Images/Image%204.png)
 </br>
 * If the status of 127.0.0.1:3310 is 'Listening' as shown above, you can conclude that the installation has been successfully completed.
 
@@ -132,6 +132,8 @@ netstat -nao | find "3310"
 * Before running the program, you need to insert the path and API key using a text editor (code editor).
 
 * The following paths and variable settings are required at the top of the 'cip_maldetect.py' code.
+
+![Alt Text](https://github.com/mt7315/criminalip_clamAVP/blob/main/Images/Image%205.png)
   
     * c2ip_file_name : the path and filename where the .csv file, storing IP address infomation detected with the Directory Listing, will be saved
    
@@ -143,7 +145,6 @@ netstat -nao | find "3310"
   
     * Criminal_IP_API_KEY : key for using Criminal IP API
 
-(마케팅팀 이미지 삽입 필요)
 
 
 </br>
@@ -161,7 +162,7 @@ A banner "CIP DETECTOR" will be displayed when the program is executed.
 
 Afterwards, the program will display the total number of requests required for collecting C2 IPs, followed by indicating the current count of remaining requests. 
 
-(마케팅팀 이미지 삽입 필요)
+![Alt Text](https://github.com/mt7315/criminalip_clamAVP/blob/main/Images/Image%206.png)
 
 </br>
 
@@ -170,7 +171,7 @@ With each completed request, the returned IP information based on the 'ipsearch_
 |IP Address|Open Port|Title|
 |----------|---------|-----|
 
-(마케팅팀 이미지 삽입 필요)
+![Alt Text](https://github.com/mt7315/criminalip_clamAVP/blob/main/Images/Image%207.png)
 
 </br>
 
@@ -178,7 +179,7 @@ Once the IP information collection is completed, the program will proceed to dow
 
 The file storing process is shown in the following image.
 
-(마케팅팀 이미지 2개 삽입 필요)
+![Alt Text](https://github.com/mt7315/criminalip_clamAVP/blob/main/Images/Image%208.png)![Alt Text](https://github.com/mt7315/criminalip_clamAVP/blob/main/Images/Image%209.png)
 
 </br>
 
@@ -189,7 +190,7 @@ The format of the 'file_result.csv' used in the example is shown in the followin
 |IP Address|Port|File Name|Result|
 |----------|----|---------|------|
 
-(마케팅팀 이미지 삽입 필요)
+![Alt Text](https://github.com/mt7315/criminalip_clamAVP/blob/main/Images/Image%207.png)
 
 </br>
 
@@ -197,5 +198,5 @@ While the above process is in progress, the terminal will provide information ab
 
 Below is an example image of the information provided in the terminal as the program is running.
 
-(마케팅팀 이미지 삽입 필요)
+![Alt Text](https://github.com/mt7315/criminalip_clamAVP/blob/main/Images/Image%207.png)
 
