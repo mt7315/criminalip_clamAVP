@@ -15,13 +15,13 @@
 
 * After downloading files from the respective Cnc server, it scans for malicious files using clamAV.
 
-* It utilizes Criminal IP's API([https://api.criminalip.io/v1/banner/search](https://api.criminalip.io/v1/banner/search)) to detect the corresponding IPs.
+* It utilizes Criminalip's API([https://api.criminalip.io/v1/banner/search](https://api.criminalip.io/v1/banner/search)) to detect the corresponding IPs.
 
 * It utilizes the [https://api.criminalip.io/v1/ip/data](https://api.criminalip.io/v1/ip/data) API to verify the link for file download and download accordingly.
 
 * All resulting values are formatted using the .csv file structure.
 
-* Through this open-source antivirus tool, you can collect malicious samples uploaded to C2 IPs and assess the risk level of those malicious IPs through sample threat analysis.
+* Through this open-source antivirus tool, you can collect malicious samples uploaded to c2 IPs and assess the risk level of those malicious IPs through sample threat analysis.
 
 </br>
 
@@ -190,7 +190,7 @@ The format of the 'file_result.csv' used in the example is shown in the followin
 |IP Address|Port|File Name|Result|
 |----------|----|---------|------|
 
-![Alt Text](https://github.com/mt7315/criminalip_clamAVP/blob/main/Images/Image%207.png)
+![Alt Text](https://github.com/mt7315/criminalip_clamAVP/blob/main/Images/Image%2010.png)
 
 </br>
 
@@ -198,5 +198,5 @@ While the above process is in progress, the terminal will provide information ab
 
 Below is an example image of the information provided in the terminal as the program is running.
 
-![Alt Text](https://github.com/mt7315/criminalip_clamAVP/blob/main/Images/Image%207.png)
+![Alt Text](https://github.com/mt7315/criminalip_clamAVP/blob/main/Images/Image%2011.png)
 
